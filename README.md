@@ -22,5 +22,5 @@ Cisco Packet Tracer · GNS3 · Wireshark
 
 ## Author
 
-Selemani Modest, Computer & Electronic Engineering student at DIT, Tanzania.
+Selemani Modest, Computer  Engineering student at DIT, Tanzania.
 Aiming for network engineer / NOC and SOC roles.
