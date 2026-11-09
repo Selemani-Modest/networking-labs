@@ -6,7 +6,7 @@ Hands-on CCNA labs built in Cisco Packet Tracer, with the topology, device confi
 
 | Lab | Topic | Status |
 |-----|-------|--------|
-| 01 | Static routing with VLSM (4 LANs + point-to-point link) | In progress |
+| 01 | [Static routing with VLSM (4 LANs + point-to-point link)](01-static-routing-vlsm/) | Done |
 
 ## What each lab folder contains
 
