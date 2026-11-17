@@ -67,9 +67,9 @@ One screenshot per step of the verification:
 
 ## Lessons learned
 
-- "Each /26 block holds 64 addresses, so the gateway (last usable address) is .62, .126 and .190, and the broadcast addresses are .63, .127 and .191. Working these out by hand made subnetting much clearer."
-- "Every cable between R1 and SW1 must sit in the VLAN that matches the gateway address on the router port it connects to. I verified the mapping with `show cdp neighbors` and `show vlan brief`, and found that my third link uses SW1 Fa0/1 instead of a gigabit port."
-- "VLAN names are stored in the VLAN database (`show vlan brief`), not in the running-config, so the config file alone does not show them. Ports I did not use (Fa0/8 to Fa0/24) are still in VLAN 1 and not shut down, which an attacker could plug into."
+- Each /26 block holds 64 addresses, so the gateway (last usable address) is .62, .126 and .190, and the broadcast addresses are .63, .127 and .191. Working these out by hand made subnetting much clearer.
+- Every cable between R1 and SW1 must sit in the VLAN that matches the gateway address on the router port it connects to. I verified the mapping with `show cdp neighbors` and `show vlan brief`, and found that my third link uses SW1 Fa0/1 instead of a gigabit port.
+- VLAN names are stored in the VLAN database (`show vlan brief`), not in the running-config, so the config file alone does not show them. Ports I did not use (Fa0/8 to Fa0/24) are still in VLAN 1 and not shut down, which an attacker could plug into.
 
 ## Security considerations
 
