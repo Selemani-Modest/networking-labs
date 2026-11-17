@@ -59,11 +59,26 @@ Note: R1's third link plugs into a FastEthernet port (Fa0/1), which is why the u
 One screenshot per step of the verification:
 
 - `images/01-topology.png` — the finished topology in Packet Tracer.
-- `images/02-show-vlan-brief-sw1.png` — `show vlan brief` on SW1, listing VLANs 10/20/30 with names ENGINEERING, HR, SALES.
-- `images/03-show-ip-interface-brief-r1.png` — `show ip interface brief` on R1, showing the three gateway interfaces.
-- `images/04-ipconfig-pc1.png` — `ipconfig` on PC1, showing the static IP 10.0.0.1/26 with gateway 10.0.0.62.
-- `images/05-ping-same-vlan.png` — ping test between two PCs in the same VLAN (VLAN10).
-- `images/06-ping-between-vlans.png` — ping test between PCs in different VLANs. Ping from PC1 (10.0.0.1) to PC3 (10.0.0.65) succeeds. PC1 sees that 10.0.0.65 is outside its /26 subnet, so it sends the packet to its default gateway (R1, 10.0.0.62). R1 has all three subnets as directly connected networks, so it forwards the packet out of the VLAN20 interface (Gig0/1) with no routing protocol needed.
+**`show vlan brief` on SW1, listing VLANs 10/20/30 with names ENGINEERING, HR, SALES.**
+
+![02-show-vlan-brief-sw1](images/02-show-vlan-brief-sw1.png)
+
+**`show ip interface brief` on R1, showing the three gateway interfaces.**
+
+![03-show-ip-interface-brief-r1](images/03-show-ip-interface-brief-r1.png)
+
+**`ipconfig` on PC1, showing the static IP 10.0.0.1/26 with gateway 10.0.0.62.**
+
+![04-ipconfig-pc1](images/04-ipconfig-pc1.png)
+
+**ping test between two PCs in the same VLAN (VLAN10).**
+
+![05-ping-same-vlan](images/05-ping-same-vlan.png)
+
+**ping test between PCs in different VLANs. Ping from PC1 (10.0.0.1) to PC3 (10.0.0.65) succeeds. PC1 sees that 10.0.0.65 is outside its /26 subnet, so it sends the packet to its default gateway (R1, 10.0.0.62). R1 has all three subnets as directly connected networks, so it forwards the packet out of the VLAN20 interface (Gig0/1) with no routing protocol needed.**
+
+![06-ping-between-vlans](images/06-ping-between-vlans.png)
+
 
 ## Lessons learned
 
